@@ -132,7 +132,7 @@ of the virtualenv to the site-specific paths of Python:
     config.load(
         config.default_file(),
         "/path/to/isso.cfg",
-    multiprocessing=True)
+    multiprocessing=True))
 
 Using the aforementioned script will load system modules when available and modules
 from the virtualenv otherwise. Should you want the opposite behavior, where modules from
