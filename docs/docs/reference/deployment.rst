@@ -178,8 +178,15 @@ The Apache configuration will then be similar to the following:
     <VirtualHost *>
         ServerName example.org
 
+        <Directory /path/to/isso/>
+                Options -Indexes +FollowSymLinks -MultiViews
+                # Allows access for everyone - adjust to suit your needs
+                # Documentation: https://httpd.apache.org/docs/2.4/mod/mod_authz_core.html#require
+                Require all granted
+        </Directory>
+
         WSGIDaemonProcess isso user=www-data group=www-data threads=5
-        WSGIScriptAlias /mounted_isso_path /path/to/isso.wsgi
+        WSGIScriptAlias /mounted_isso_path /path/to/isso/isso.wsgi
     </VirtualHost>
 
 You will need to adjust the user and group according to your Apache installation and
