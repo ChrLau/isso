@@ -180,10 +180,10 @@ The Apache configuration will then be similar to the following:
 
         # The isso db must be located somewhere under this path
         <Directory /path/to/isso/>
-                Options -Indexes +FollowSymLinks -MultiViews
-                # Allows access for everyone - adjust to suit your needs
-                # Documentation: https://httpd.apache.org/docs/2.4/mod/mod_authz_core.html#require
-                Require all granted
+            Options -Indexes +FollowSymLinks -MultiViews
+            # Allows access for everyone - adjust to suit your needs
+            # Documentation: https://httpd.apache.org/docs/2.4/mod/mod_authz_core.html#require
+            Require all granted
         </Directory>
 
         WSGIDaemonProcess isso user=www-data group=www-data threads=5
