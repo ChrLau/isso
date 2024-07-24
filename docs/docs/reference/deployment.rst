@@ -166,7 +166,7 @@ the virtualenv have priority over system modules, the following script does the 
     config.load(
         config.default_file(),
         "/path/to/isso.cfg",
-    multiprocessing=True)
+    multiprocessing=True))
 
 The last two scripts are based on those given by
 `mod_wsgi documentation <https://code.google.com/p/modwsgi/wiki/VirtualEnvironments>`_.
