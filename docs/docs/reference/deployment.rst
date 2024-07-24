@@ -178,6 +178,7 @@ The Apache configuration will then be similar to the following:
     <VirtualHost *>
         ServerName example.org
 
+        # The isso db must be located somewhere under this path
         <Directory /path/to/isso/>
                 Options -Indexes +FollowSymLinks -MultiViews
                 # Allows access for everyone - adjust to suit your needs
